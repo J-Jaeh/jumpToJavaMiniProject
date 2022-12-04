@@ -7,6 +7,7 @@ public class Packet {
 
     public void addItem(Item item){
         this.items.add(item);
+
     }
     public Item getItem(int index){
         return this.items.get(index);
@@ -23,7 +24,7 @@ public class Packet {
         int pos =0;
         for (Item item : items) {
             byte[] temp = new byte[item.getLength()];
-            System.arraycopy((bdata, pos, temp,0,item.getLength());
+            System.arraycopy(bdata, pos, temp,0,item.getLength());
             pos += item.getLength();
             item.changeValue(new String(temp) );
 
@@ -36,10 +37,16 @@ public class Packet {
         Item item2 = Item.create("전화번호",11,"01077771234");
 
 
-
         packet.addItem(item1);
         packet.addItem(item2);
 
         System.out.println(packet.raw());
+
+        Packet recvPacket = new Packet();
+        recvPacket.addItem(Item.create("생일", 8, null));
+        recvPacket.addItem(Item.create("주소", 50, null));
+        recvPacket.parse("19801215서울시 송파구 잠실동 123-3               ");
+
+        System.out.println(recvPacket.getItem(1).raw());
     }
 }
