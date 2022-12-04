@@ -41,6 +41,14 @@ public class Item {
         //문자열 길이말고 바이트의 길이를 체크한것!
         //전문 송수신시 길이체크는 항상 바이트 단위로 하는 것이 안전하다.
     }
+    public  static  Item create(String name, int length, String value){
+        Item item = new Item();
+        item.changeName(name);
+        item.changeLength(length);
+        item.changeValue(value);
+        return item;
+    }
+    //객체를 생성해서 반환하는 메소드를 팩토리 메소드라고 한다 !
 
 
     public static void main(String[] args) {

@@ -22,16 +22,10 @@ public class Packet {
     public static void main(String[] args) {
         Packet packet =new Packet();
 
-        Item item1 = new Item();
-        Item item2 = new Item();
+        Item item1 = Item.create("이름",20,"진재혁");
+        Item item2 = Item.create("전화번호",11,"01077771234");
 
-        item1.changeName("이름");
-        item1.changeLength(20);
-        item1.changeValue("진재혁");
 
-        item2.changeName("전화번호");
-        item2.changeLength(11);
-        item2.changeValue("01022601234");
 
         packet.addItem(item1);
         packet.addItem(item2);
