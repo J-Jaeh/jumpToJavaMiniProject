@@ -18,7 +18,17 @@ public class Packet {
         }
         return result.toString();
     }
+    public void parse(String data) {
+        byte[] bdata = data.getBytes();
+        int pos =0;
+        for (Item item : items) {
+            byte[] temp = new byte[item.getLength()];
+            System.arraycopy((bdata, pos, temp,0,item.getLength());
+            pos += item.getLength();
+            item.changeValue(new String(temp) );
 
+        }
+    }
     public static void main(String[] args) {
         Packet packet =new Packet();
 
