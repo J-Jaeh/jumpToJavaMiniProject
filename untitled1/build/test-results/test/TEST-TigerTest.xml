@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TigerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-12-02T01:41:35" hostname="DESKTOP-KHVUHH1" time="0.199">
+  <properties/>
+  <testcase name="getFood()" classname="TigerTest" time="0.199"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
